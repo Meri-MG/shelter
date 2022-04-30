@@ -1,0 +1,318 @@
+:root {
+  --light-pink-color: #FAFAFA;
+  --lighter-pink-color: #F6F6F6;
+  --color-primary: #F1CDB3;
+  --color-white: #ffffff;
+  --color-dark: #292929;
+  --primary-hover: #FDDCC4;
+  --color-dark-about: #545454;
+  --color-nav-link: #CDCDCD;
+}
+
+*, html, body {
+  scroll-behavior: smooth !important;
+}
+
+body {
+  box-sizing: border-box;
+}
+
+.wrapper  {
+  max-width: 1280px;
+  margin: 0 auto;
+  left: calc(50% - 1200px/2);
+  padding: 3.75rem 2.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.start_wrapper, footer {
+  background: linear-gradient(to right, #5B483A, #262425, #211F20);
+}
+
+header .wrapper h2 {
+  font-size: 32px;
+  line-height: 35.2px; 
+  color: var(--color-primary);
+  
+}
+
+header .wrapper h3 {
+  font-size: 13px;
+  line-height: 14.95px; 
+  color: var(--color-white);
+  margin-top: 0.65rem;
+}
+
+header .wrapper nav {
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+header .wrapper nav ul {
+  display: flex;
+  width: 80%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .wrapper nav ul li a {
+  color: var(--color-nav-link);
+  text-decoration: none;
+  line-height: 24px;
+  font-size: 15px;
+  padding-bottom: 0.3rem;
+  align-self: end;
+}
+
+header .wrapper nav ul li a:hover {
+  border-bottom: 3px solid var(--color-primary);
+  color: var(--light-pink-color);
+}
+
+header .wrapper nav ul li .highlighted {
+  border-bottom: 3px solid var(--color-primary);
+  color: var(--light-pink-color);
+}
+
+.headline_section .wrapper {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.headline_section .content_wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 2.63rem;
+  height: 322px;
+}
+
+.headline_section .content_wrapper h1 {
+  font-size: 44px;
+  line-height: 57.2px;
+  color: var(--color-white);
+  width: 19.3rem;
+  align-self: start;
+}
+
+.headline_section .content_wrapper p {
+  font-size: 15px;
+  line-height: 24px;
+  color: var(--light-pink-color);
+  width: 27rem;
+}
+
+.headline_section .content_wrapper a {
+  align-self: start;
+}
+
+.headline_section .content_wrapper .get_know_button, .pets_cards li button, .pets_section .get_know_button {
+  background-color: var(--color-primary);
+  color: var(--color-dark);
+  border-radius: 100px;
+  padding: 0.95rem 2.81rem; 
+  border: none;
+  align-self: start;
+  cursor: pointer;
+  font-size: 17px;
+  line-height: 22px;
+}
+
+.headline_section .content_wrapper .get_know_button:hover, .pets_cards li button:hover, .pets_section .get_know_button:hover, .pets_cards li .arrow_circles:hover, .donation_section button:hover {
+  background-color: var(--primary-hover);
+  cursor: pointer;
+}
+
+.headline_section img {
+  max-width: 43.5rem;
+}
+
+.about_section {
+  padding-left: 13.5rem;
+  padding-right: 13.5rem;
+  background-color: var(--color-white);
+}
+
+.about_section img {
+  max-width: 300px;
+  margin-right: 7.5rem;
+
+}
+
+.about_section h2, .pets_section h2, .help_section h2, .donation_section h2 {
+  font-size: 35px;
+  line-height: 45.5px;
+  color: var(--color-dark-about);
+  width: 300px;
+}
+
+.about_section p, .donation_section p {
+  color: var(--color-dark-about);
+  font-size: 15px;
+  line-height: 24px;
+  margin-top: 1.5rem;
+}
+
+.pets_section, .donation_section {
+  background-color: var(--lighter-pink-color);
+}
+
+.pets_section .wrapper, .help_section .wrapper {
+  flex-direction: column;
+}
+
+.pets_section h2, .help_section h2 {
+  width: 400px;
+  text-align: center;
+}
+
+.pets_section .wrapper .pets_cards {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin: 3.75rem 0;
+}
+
+.pets_cards li {
+  background-color: var(--light-pink-color)
+}
+
+.pets_cards li .arrow_circles {
+  color: var(--color-dark);
+  border: 1px solid var(--primary-hover);
+  border-radius: 50%;
+  padding: 1rem;
+  display: flex;
+}
+
+.pets_cards li h4, .help_section li h4 {
+  color: var(--color-dark-about);
+  font-size: 20px;
+  line-height: 22.72px;
+  margin: 1.9rem 0;
+}
+
+.pets_cards .card_content {
+  text-align: center;
+}
+
+.pets_cards li button {
+  background-color: var(--light-pink-color);
+  color: var(--color-dark);
+  border: 1px solid var(--primary-hover);
+  margin-bottom: 2.5rem;
+}
+
+.pets_section .get_know_button {
+  align-self: center;
+}
+
+.help_section {
+  background-color: var(--color-white);
+}
+
+.help_section .wrapper {
+  padding-left: 9rem;
+  padding-right: 9rem;
+}
+
+.help_section .first_grid {
+  display: grid;
+  grid-gap: 4.5rem;
+  grid: auto / repeat(5, 9.5rem);
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin: 3.5rem 0;
+}
+
+.help_section li {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.second_grid {
+  display: grid;
+  grid-gap: 7.5rem;
+  grid: auto / repeat(4, 9.5rem);
+  justify-content: center;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.help_section li h4 {
+  text-align: center;
+}
+
+.donation_section {
+  padding-left: 9rem;
+  padding-right: 9rem;
+}
+
+.donation_section .donation_para {
+  color: #B2B2B2;
+}
+
+.donation_section .content_wrapper {
+  margin-left: 1.88rem;
+}
+
+.donation_section .donation_button {
+  background-color: var(--color-primary);
+  color: var(--color-dark-about);
+  padding: 0.7rem 0;
+  margin: 1.25rem 0;
+  border: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 20px;
+  line-height: 22px;
+  border-radius: 9px;
+  cursor: pointer;
+  width: 350px;
+}
+
+footer .wrapper {
+  padding-bottom: 0;
+}
+
+footer h2 {
+  padding-top: 0.3rem;
+  color: var(--color-white);
+  font-size: 35px;
+  line-height: 45.5px;
+  width: 278px;
+}
+
+footer .wrapper div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+  height: 310px;
+  color: var(--color-primary);
+  font-size: 20px;
+  line-height: 23px;
+}
+
+footer .wrapper div a:last-child {
+  padding-bottom: 3.5rem;
+}
+
+footer .wrapper div a {
+  display: flex;
+  align-items: center;
+  color: var(--color-primary);
+}
+
+footer .wrapper div a span {
+  margin-left: 1.25rem;
+}
