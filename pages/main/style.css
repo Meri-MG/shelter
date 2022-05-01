@@ -333,6 +333,10 @@ header .wrapper nav ul li .highlighted {
   width: 350px;
 }
 
+.donation_section .donation_button:hover {
+  background-color: var(--primary-hover);
+}
+
 footer .wrapper {
   padding: 3.5rem 2.5rem;
   padding-bottom: 0;
