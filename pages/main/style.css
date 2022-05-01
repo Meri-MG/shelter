@@ -199,6 +199,12 @@ header .wrapper nav ul li .highlighted {
   flex-direction: column;
 }
 
+.pets_section .wrapper {
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+}
+
+
 .help_section, .about_section {
   padding-top: 5rem;
   padding-bottom: 6.25rem;
