@@ -2,20 +2,20 @@
   font-family: "Georgia";
   src: url("/assets/fonts/Georgia.ttf");
   src:
-  url("/assets/fonts/Georgia.woff") format("woff"),
-  url("/assets/fonts/Georgia.woff2") format("woff2"),
-  url("/assets/fonts/Georgia.otf") format("opentype"),
-  url("/assets/fonts/Georgia.svg#filename") format("svg");
+    url("/assets/fonts/Georgia.woff") format("woff"),
+    url("/assets/fonts/Georgia.woff2") format("woff2"),
+    url("/assets/fonts/Georgia.otf") format("opentype"),
+    url("/assets/fonts/Georgia.svg#filename") format("svg");
 }
 
 @font-face {
   font-family: "Arial";
   src: url("/assets/fonts/Arialn.ttf");
   src:
-  url("/assets/fonts/Arialn.woff") format("woff"),
-  url("/assets/fonts/Arialn.woff2") format("woff2"),
-  url("/assets/fonts/Arialn.otf") format("opentype"),
-  url("/assets/fonts/Arialn.svg#filename") format("svg");
+    url("/assets/fonts/Arialn.woff") format("woff"),
+    url("/assets/fonts/Arialn.woff2") format("woff2"),
+    url("/assets/fonts/Arialn.otf") format("opentype"),
+    url("/assets/fonts/Arialn.svg#filename") format("svg");
 }
 
 
@@ -43,10 +43,13 @@ body {
   max-width: 1280px;
   margin: 0 auto;
   left: calc(50% - 1200px/2);
-  padding: 3.75rem 2.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.start_wrapper .wrapper {
+  padding: 3.75rem 2.5rem;
 }
 
 .start_wrapper, footer {
@@ -55,17 +58,18 @@ body {
 
 header .wrapper h2 {
   font-size: 32px;
-  line-height: 35.2px; 
+  line-height: 35.2px;
   color: var(--color-primary);
-  
+  letter-spacing: 0.06em;
 }
 
 header .wrapper h3 {
-  font-size: 15px;
+  font-size: 13px;
   line-height: 14.95px; 
   color: var(--color-white);
   margin-top: 0.65rem;
   font-family: 'Arial';
+  letter-spacing: 0.1em;
 }
 
 header .wrapper nav {
@@ -92,7 +96,6 @@ header .wrapper nav ul li a {
 }
 
 header .wrapper nav ul li a:hover {
-  border-bottom: 3px solid var(--color-primary);
   color: var(--light-pink-color);
 }
 
@@ -121,6 +124,7 @@ header .wrapper nav ul li .highlighted {
   color: var(--color-white);
   width: 19.3rem;
   align-self: start;
+  letter-spacing: 0;
 }
 
 .headline_section .content_wrapper p {
@@ -145,6 +149,7 @@ header .wrapper nav ul li .highlighted {
   cursor: pointer;
   font-size: 17px;
   line-height: 22px;
+  letter-spacing: 0.06em;
 }
 
 .headline_section .content_wrapper .get_know_button:hover, .pets_cards li button:hover, .pets_section .get_know_button:hover, .pets_cards li .arrow_circles:hover, .donation_section button:hover {
@@ -172,7 +177,8 @@ header .wrapper nav ul li .highlighted {
   font-size: 35px;
   line-height: 45.5px;
   color: var(--color-dark-about);
-  width: 300px;
+  width: 370px;
+  letter-spacing: 0.06em;
 }
 
 .about_section p, .donation_section p {
@@ -185,10 +191,17 @@ header .wrapper nav ul li .highlighted {
 
 .pets_section, .donation_section {
   background-color: var(--lighter-pink-color);
+  padding-top: 5rem;
+  padding-bottom: 6.25rem;
 }
 
 .pets_section .wrapper, .help_section .wrapper {
   flex-direction: column;
+}
+
+.help_section, .about_section {
+  padding-top: 5rem;
+  padding-bottom: 6.25rem;
 }
 
 .pets_section h2, .help_section h2 {
@@ -208,10 +221,14 @@ header .wrapper nav ul li .highlighted {
   background-color: var(--light-pink-color)
 }
 
+.pets_cards li:first-child, li:last-child {
+  border-radius: 50%;
+}
+
 .pets_cards li .arrow_circles {
   color: var(--color-dark);
   border: 1px solid var(--primary-hover);
-  border-radius: 50%;
+  border-radius: 65%;
   padding: 1rem;
   display: flex;
 }
@@ -221,6 +238,7 @@ header .wrapper nav ul li .highlighted {
   font-size: 20px;
   line-height: 22.72px;
   margin: 1.9rem 0;
+  letter-spacing: 0.06em;
 }
 
 .pets_cards .card_content {
@@ -250,7 +268,7 @@ header .wrapper nav ul li .highlighted {
 .help_section .first_grid {
   display: grid;
   grid-gap: 4.5rem;
-  grid: auto / repeat(5, 9.5rem);
+  grid: auto / repeat(5, 10rem);
   width: 100%;
   justify-content: center;
   align-items: center;
@@ -267,7 +285,7 @@ header .wrapper nav ul li .highlighted {
 .second_grid {
   display: grid;
   grid-gap: 7.5rem;
-  grid: auto / repeat(4, 9.5rem);
+  grid: auto / repeat(4, 10.4rem);
   justify-content: center;
   width: 90%;
   margin: 0 auto;
@@ -286,6 +304,7 @@ header .wrapper nav ul li .highlighted {
   color: #B2B2B2;
   font-family: 'Arial';
   font-style: italic;
+  width: 23.75rem;
 }
 
 .donation_section .content_wrapper {
@@ -309,6 +328,7 @@ header .wrapper nav ul li .highlighted {
 }
 
 footer .wrapper {
+  padding: 3.5rem 2.5rem;
   padding-bottom: 0;
 }
 
@@ -318,6 +338,7 @@ footer h2 {
   font-size: 35px;
   line-height: 45.5px;
   width: 278px;
+  letter-spacing: 0.05em;
 }
 
 footer .wrapper div {
@@ -329,6 +350,7 @@ footer .wrapper div {
   color: var(--color-primary);
   font-size: 20px;
   line-height: 23px;
+  letter-spacing: 0.06em;
 }
 
 footer .wrapper div a:last-child {
