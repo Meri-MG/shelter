@@ -97,6 +97,7 @@ header .wrapper nav ul li a {
 
 header .wrapper nav ul li a:hover {
   color: var(--light-pink-color);
+  transition: all 0.3s ease 0s;
 }
 
 header .wrapper nav ul li .highlighted {
@@ -154,6 +155,7 @@ header .wrapper nav ul li .highlighted {
 
 .headline_section .content_wrapper .get_know_button:hover, .pets_cards li button:hover, .pets_section .get_know_button:hover, .pets_cards li .arrow_circles:hover, .donation_section button:hover {
   background-color: var(--primary-hover);
+  transition: all 0.3s ease 0s;
   cursor: pointer;
 }
 
@@ -224,7 +226,14 @@ header .wrapper nav ul li .highlighted {
 }
 
 .pets_cards li {
-  background-color: var(--light-pink-color)
+  background-color: var(--light-pink-color);
+  border-radius: 9px;
+}
+
+.pets_cards li:hover {
+  background-color: var(--color-white);
+  transition: all 0.3s ease 0s;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
 .pets_cards li:first-child, li:last-child {
@@ -335,6 +344,7 @@ header .wrapper nav ul li .highlighted {
 
 .donation_section .donation_button:hover {
   background-color: var(--primary-hover);
+  transition: all 0.3s ease 0s;
 }
 
 footer .wrapper {
