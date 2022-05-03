@@ -1,0 +1,93 @@
+@font-face {
+  font-family: "Georgia";
+  src: url("/assets/fonts/Georgia.ttf");
+  src:
+    url("/assets/fonts/Georgia.woff") format("woff"),
+    url("/assets/fonts/Georgia.woff2") format("woff2"),
+    url("/assets/fonts/Georgia.otf") format("opentype"),
+    url("/assets/fonts/Georgia.svg#filename") format("svg");
+}
+
+@font-face {
+  font-family: "Arial";
+  src: url("/assets/fonts/Arialn.ttf");
+  src:
+    url("/assets/fonts/Arialn.woff") format("woff"),
+    url("/assets/fonts/Arialn.woff2") format("woff2"),
+    url("/assets/fonts/Arialn.otf") format("opentype"),
+    url("/assets/fonts/Arialn.svg#filename") format("svg");
+}
+
+
+:root {
+  --light-pink-color: #FAFAFA;
+  --lighter-pink-color: #F6F6F6;
+  --color-primary: #F1CDB3;
+  --color-white: #ffffff;
+  --color-dark: #292929;
+  --primary-hover: #FDDCC4;
+  --color-dark-about: #545454;
+  --color-nav-link: #CDCDCD;
+}
+
+*, html, body {
+  scroll-behavior: smooth !important;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: 'Georgia';
+}
+
+.wrapper  {
+  max-width: 1280px;
+  margin: 0 auto;
+  left: calc(50% - 1200px/2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer {
+  background: linear-gradient(to right, #5B483A, #262425, #211F20);
+}
+  
+footer .wrapper {
+  padding: 3.5rem 2.5rem;
+  padding-bottom: 0;
+}
+  
+footer h2 {
+  padding-top: 0.3rem;
+  color: var(--color-white);
+  font-size: 35px;
+  line-height: 45.5px;
+  width: 278px;
+  letter-spacing: 0.05em;
+}
+  
+footer .wrapper div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+  height: 310px;
+  color: var(--color-primary);
+  font-size: 20px;
+  line-height: 23px;
+  letter-spacing: 0.06em;
+}
+  
+footer .wrapper div a:last-child {
+  padding-bottom: 3.5rem;
+}
+  
+footer .wrapper div a {
+  display: flex;
+  align-items: center;
+  color: var(--color-primary);
+}
+  
+footer .wrapper div a span {
+  margin-left: 1.25rem;
+}
