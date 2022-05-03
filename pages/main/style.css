@@ -234,6 +234,7 @@ header .wrapper nav ul li .highlighted {
   background-color: var(--color-white);
   transition: all 0.3s ease 0s;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  cursor: pointer;
 }
 
 .pets_cards li:first-child, li:last-child {
