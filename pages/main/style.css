@@ -164,8 +164,8 @@ header .wrapper nav ul li .highlighted {
 }
 
 .about_section {
-  padding-left: 13.5rem;
-  padding-right: 13.5rem;
+  padding-left: 13.44rem;
+  padding-right: 13.44rem;
   background-color: var(--color-white);
 }
 
@@ -183,12 +183,25 @@ header .wrapper nav ul li .highlighted {
   letter-spacing: 0.06em;
 }
 
+.donation_section h2 {
+  width: 18.75rem;
+}
+
 .about_section p, .donation_section p {
   color: var(--color-dark-about);
   font-size: 15px;
   line-height: 24px;
-  margin-top: 1.5rem;
+  margin-top: 1.56rem;
   font-family: 'Arial';
+  width: 26.88rem;
+}
+
+.donation_section p:first-child {
+  width: 19.19rem;
+}
+
+.donation_section .donation_para {
+  width: 23.75rem
 }
 
 .pets_section, .donation_section {
@@ -310,8 +323,7 @@ header .wrapper nav ul li .highlighted {
 }
 
 .donation_section {
-  padding-left: 9rem;
-  padding-right: 9rem;
+  padding: 5.69rem 11.44rem 6.88rem 11.44rem;
 }
 
 .donation_section .donation_para {
@@ -344,6 +356,10 @@ header .wrapper nav ul li .highlighted {
 .donation_section .donation_button:hover {
   background-color: var(--primary-hover);
   transition: all 0.3s ease 0s;
+}
+
+.donation_section .donation_button {
+  width: 21.81rem
 }
 
 footer .wrapper {
