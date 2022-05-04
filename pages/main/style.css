@@ -237,6 +237,11 @@ header .wrapper nav ul li .highlighted {
   cursor: pointer;
 }
 
+.pets_cards li:hover button {
+  background-color: var(--primary-hover);
+  transition: all 0.3s ease 0s;
+}
+
 .pets_cards li:first-child, li:last-child {
   border-radius: 50%;
 }
