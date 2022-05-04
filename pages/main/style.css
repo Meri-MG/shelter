@@ -276,15 +276,9 @@ header .wrapper nav ul li .highlighted {
   background-color: var(--color-white);
 }
 
-.help_section .wrapper {
-  padding-left: 9rem;
-  padding-right: 9rem;
-}
-
 .help_section .first_grid {
   display: grid;
-  grid-gap: 4.5rem;
-  grid: auto / repeat(5, 10rem);
+  grid: auto / repeat(auto-fit, minmax(8rem, 1fr));
   width: 100%;
   justify-content: center;
   align-items: center;
@@ -300,8 +294,7 @@ header .wrapper nav ul li .highlighted {
 
 .second_grid {
   display: grid;
-  grid-gap: 7.5rem;
-  grid: auto / repeat(4, 10.4rem);
+  grid: auto / repeat(auto-fit, minmax(8rem, 1fr));
   justify-content: center;
   width: 90%;
   margin: 0 auto;
