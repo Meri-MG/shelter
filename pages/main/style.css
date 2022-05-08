@@ -40,7 +40,7 @@ body {
 }
 
 .wrapper  {
-  max-width: 1280px;
+  max-width: 1200px;
   margin: 0 auto;
   left: calc(50% - 1200px/2);
   display: flex;
@@ -49,7 +49,7 @@ body {
 }
 
 .start_wrapper .wrapper {
-  padding: 3.75rem 2.5rem;
+  padding: 3.75rem 0;
 }
 
 .start_wrapper, footer {
@@ -159,14 +159,19 @@ header .wrapper nav ul li .highlighted {
   cursor: pointer;
 }
 
+.headline_section .wrapper div:last-child { 
+  max-width: 698px;
+}
 .headline_section img {
-  max-width: 43.5rem;
+  max-width: 100%;
 }
 
 .about_section {
-  padding-left: 13.44rem;
-  padding-right: 13.44rem;
   background-color: var(--color-white);
+}
+
+.about_section .wrapper {
+  max-width: 800px;
 }
 
 .about_section img {
@@ -213,12 +218,6 @@ header .wrapper nav ul li .highlighted {
 .pets_section .wrapper, .help_section .wrapper {
   flex-direction: column;
 }
-
-.pets_section .wrapper {
-  padding-left: 2.5rem;
-  padding-right: 2.5rem;
-}
-
 
 .help_section, .about_section {
   padding-top: 5rem;
@@ -322,8 +321,9 @@ header .wrapper nav ul li .highlighted {
   text-align: center;
 }
 
-.donation_section {
-  padding: 5.69rem 11.44rem 6.88rem 11.44rem;
+.donation_section .wrapper {
+  max-width: 914px;
+  margin: 0 auto;
 }
 
 .donation_section .donation_para {
