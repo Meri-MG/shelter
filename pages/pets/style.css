@@ -1,0 +1,274 @@
+@font-face {
+  font-family: "Georgia";
+  src: url("/assets/fonts/Georgia.ttf");
+  src:
+    url("/assets/fonts/Georgia.woff") format("woff"),
+    url("/assets/fonts/Georgia.woff2") format("woff2"),
+    url("/assets/fonts/Georgia.otf") format("opentype"),
+    url("/assets/fonts/Georgia.svg#filename") format("svg");
+}
+
+@font-face {
+  font-family: "Arial";
+  src: url("/assets/fonts/Arialn.ttf");
+  src:
+    url("/assets/fonts/Arialn.woff") format("woff"),
+    url("/assets/fonts/Arialn.woff2") format("woff2"),
+    url("/assets/fonts/Arialn.otf") format("opentype"),
+    url("/assets/fonts/Arialn.svg#filename") format("svg");
+}
+
+
+:root {
+  --light-pink-color: #FAFAFA;
+  --lighter-pink-color: #F6F6F6;
+  --color-primary: #F1CDB3;
+  --color-white: #ffffff;
+  --color-dark: #292929;
+  --primary-hover: #FDDCC4;
+  --color-dark-about: #545454;
+  --color-nav-link: #CDCDCD;
+}
+
+*, html, body {
+  scroll-behavior: smooth !important;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: 'Georgia';
+}
+
+.wrapper  {
+  max-width: 1200px;
+  margin: 0 auto;
+  left: calc(50% - 1200px/2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .wrapper {
+  margin: 1.88rem auto;
+}
+
+header .wrapper h1 {
+  font-size: 32px;
+  line-height: 35.2px;
+  color: var(--color-dark-about);
+  letter-spacing: 0.06em;
+}
+
+header .wrapper h3 {
+  font-size: 13px;
+  line-height: 14.95px; 
+  color: var(--color-dark-about);
+  margin-top: 0.65rem;
+  font-family: 'Arial';
+  letter-spacing: 0.1em;
+}
+
+header .wrapper nav {
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+header .wrapper nav ul {
+  display: flex;
+  width: 80%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .wrapper nav ul li a {
+  color: var(--color-dark-about);
+  text-decoration: none;
+  line-height: 24px;
+  font-size: 15px;
+  font-family: 'Arial';
+  padding-bottom: 0.3rem;
+  align-self: end;
+}
+
+header .wrapper nav ul li a:hover {
+  color: var(--color-dark);
+}
+
+header .wrapper nav ul li .highlighted {
+  border-bottom: 3px solid var(--color-primary);
+  color: var(--color-dark);
+}
+
+.pets_section h2 {
+  font-size: 35px;
+  line-height: 45.5px;
+  color: var(--color-dark-about);
+  width: 370px;
+  letter-spacing: 0.06em;
+}
+
+.pets_section {
+  background-color: var(--lighter-pink-color);
+  padding-top: 5rem;
+  padding-bottom: 6.25rem;
+}
+
+.pets_section .wrapper {
+  flex-direction: column;
+}
+
+.pets_section h2 {
+  width: 400px;
+  text-align: center;
+}
+
+.pets_section .wrapper .pets_cards {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin: 3.75rem 0;
+}
+
+.pets_cards {
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.pets_cards li {
+  background-color: var(--light-pink-color);
+  border-radius: 9px;
+}
+
+.pets_cards li .arrow_circles {
+  color: var(--color-dark);
+  border: 1px solid var(--primary-hover);
+  border-radius: 65%;
+  padding: 1rem;
+  display: flex;
+}
+
+.pets_cards li h4, .help_section li h4 {
+  color: var(--color-dark-about);
+  font-size: 20px;
+  line-height: 22.72px;
+  margin: 1.9rem 0;
+  letter-spacing: 0.06em;
+}
+
+.pets_cards .card_content {
+  text-align: center;
+}
+
+.pets_cards li button {
+  background-color: var(--light-pink-color);
+  color: var(--color-dark);
+  border: 1px solid var(--primary-hover);
+  margin-bottom: 2.5rem;
+  font-size: 20px;
+  line-height: 23px;
+}
+
+.pets_cards li button {
+  padding: 0.95rem 2.81rem; 
+  background-color: var(--light-pink-color);
+  color: var(--color-dark);
+  border: 1px solid var(--primary-hover);
+  border-radius: 100px;
+  margin-bottom: 2.5rem;
+  align-self: start;
+  cursor: pointer;
+  font-size: 17px;
+  line-height: 22px;
+  letter-spacing: 0.06em;
+}
+
+.pets_cards li:hover {
+  background-color: var(--color-white);
+  transition: all 0.3s ease 0s;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  cursor: pointer;
+}
+
+.pets_cards li:hover button {
+  background-color: var(--color-primary);
+  color: var(--color-dark);
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+.pagination {
+  width: 21.25rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pagination .pagination_button {
+  color: var(--color-dark);
+  border: 1px solid var(--primary-hover);
+  width: 3.25rem;
+  height: 3.25rem;
+  border-radius: 65%;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.pagination .active:hover, .hover_active:hover {
+  background-color: var(--primary-hover);
+  transition: all 0.3s ease 0s;
+}
+
+.pagination .disabled {
+  border: 1px solid #B2B2B2;
+  cursor: not-allowed;
+  pointer-events: all !important;
+}
+
+footer {
+  background: linear-gradient(to right, #5B483A, #262425, #211F20);
+}
+  
+footer .wrapper {
+  padding-top: 3.5rem;
+  padding-bottom: 0;
+}
+  
+footer h2 {
+  padding-top: 0.3rem;
+  color: var(--color-white);
+  font-size: 35px;
+  line-height: 45.5px;
+  width: 278px;
+  letter-spacing: 0.05em;
+}
+  
+footer .wrapper div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+  height: 310px;
+  color: var(--color-primary);
+  font-size: 20px;
+  line-height: 23px;
+  letter-spacing: 0.06em;
+}
+  
+footer .wrapper div a:last-child {
+  padding-bottom: 3.5rem;
+}
+  
+footer .wrapper div a {
+  display: flex;
+  align-items: center;
+  color: var(--color-primary);
+}
+  
+footer .wrapper div a span {
+  margin-left: 1.25rem;
+}
