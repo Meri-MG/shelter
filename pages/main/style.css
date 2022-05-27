@@ -200,10 +200,6 @@ header .wrapper nav .burger_icon {
   letter-spacing: 0.06em;
 }
 
-.donation_section h2 {
-  width: 18.75rem;
-}
-
 .about_section p, .donation_section p {
   color: var(--color-dark-about);
   font-size: 15px;
@@ -392,7 +388,7 @@ footer h2 {
   letter-spacing: 0.05em;
 }
 
-footer .wrapper div {
+footer .wrapper .contact_info, .location_info {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -425,6 +421,15 @@ footer .wrapper div a span {
 }
 
 @media (max-width: 1150px) {
+  .donation_section .wrapper {
+    flex-direction: column-reverse;
+  }
+
+  .donation_section .content_wrapper {
+    margin: 0 auto;
+    margin-bottom: 3.75rem;
+  }
+
   footer .wrapper {
     max-width: 83.3%;
     margin: 0 auto;
@@ -622,10 +627,10 @@ footer .wrapper div a span {
     max-width: 16.88rem;
   }
 
-  .about_section h2, .pets_section h2 {
+  .about_section h2, .pets_section h2, .donation_section h2 {
     text-align: center;
     max-width: 18.75rem;
-    font-size: 25px;
+    font-size: 1.56rem;
   }
 
   .pets_cards li:first-child, li:last-child {
@@ -657,6 +662,22 @@ footer .wrapper div a span {
     transition: all 0.3s ease 0s;
     cursor: pointer;
   }
+
+
+  .donation_section .donation_button {
+    width: 17.56rem;
+    font-size: 15px;
+  }
+
+  .donation_section .donation_para {
+    width: 17.5rem;
+  }
+
+  .donation_section .golden_puppy img {
+    width: 16.25rem;
+    margin: 0 auto;
+    align-self: center;
+  }
 }
 
 @media (max-width: 430px) {
@@ -675,7 +696,7 @@ footer .wrapper div a span {
   }
 
   .headline_section .wrapper .content_wrapper h1 {
-    font-size: 25px;
+    font-size: 1.56rem;
     text-align: center;
     margin-bottom: 2.5rem;
   }
@@ -698,6 +719,14 @@ footer .wrapper div a span {
   footer .wrapper .footer_content_wrapper a .location {
     margin-left: 0;
     width: 16rem;
+  }
+
+  footer .image_wrapper {
+    padding-bottom: 0;
+  }
+
+  footer .image_wrapper img {
+    width: 16.25rem;
   }
 }
 
