@@ -24,6 +24,27 @@
             </a>
           </div>
           <nav>
+            <div class="burger_icon" id="burger_icon">
+              <div class="bar line-1"></div>
+              <div class="bar line-2"></div>
+              <div class="bar line-3"></div>
+            </div>
+            <div class="sidenav" id="sidenav">
+              <ul>
+                <li>
+                  <a href="../main/index.html" class="highlighted"
+                    >About the shelter</a
+                  >
+                </li>
+                <li>
+                  <a href="../pets/index.html">Our pets</a>
+                </li>
+                <li>
+                  <a href="#help_section">Help the shelter</a>
+                </li>
+                <li><a href="#contacts">Contacts</a></li>
+              </ul>
+            </div>
             <ul>
               <li>
                 <a href="#about_section" class="highlighted"
@@ -61,10 +82,10 @@
     </div>
     <section class="about_section" id="about_section">
       <div class="wrapper">
-        <div>
+        <div class="image_content">
           <img src="../../assets/images/about-pets.png" alt="about_pets" />
         </div>
-        <div>
+        <div class="text_content">
           <h2>About the shelter “Cozy House”</h2>
           <p>
             Currently we have 121 dogs and 342 cats on our hands and statistics
@@ -83,7 +104,7 @@
         </div>
       </div>
     </section>
-    <section class="pets_section" id="pets_section">
+    <!-- <section class="pets_section" id="pets_section">
       <div class="wrapper">
         <h2>
           Our friends who <br />
@@ -245,7 +266,7 @@
           </p>
         </div>
       </div>
-    </section>
+    </section> -->
     <footer id="contacts">
       <div class="wrapper">
         <div>
@@ -288,5 +309,6 @@
         </div>
       </div>
     </footer>
+    <script src="./script.js"></script>
   </body>
 </html>
