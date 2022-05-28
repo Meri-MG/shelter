@@ -1,6 +1,8 @@
 const id = (id) => document.getElementById(id);
 let burger = id('burger_icon'),
-  sidenav = id('sidenav');
+  sidenav = id('sidenav'),
+  logoTitle = id('logo_title'),
+  logoSub = id('logo_subtitle');
 
 const toggleMenu = (el) => {
   if (el.classList.contains('open')) {
@@ -13,4 +15,7 @@ const toggleMenu = (el) => {
 burger.addEventListener('click', () => {
   toggleMenu(burger);
   toggleMenu(sidenav);
+  toggleMenu(logoTitle);
+  toggleMenu(logoSub);
 });
+console.log(burger);

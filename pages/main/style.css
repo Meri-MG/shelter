@@ -1,0 +1,767 @@
+@font-face {
+  font-family: "Georgia";
+  src: url("/assets/fonts/Georgia.ttf");
+  src:
+    url("/assets/fonts/Georgia.woff") format("woff"),
+    url("/assets/fonts/Georgia.woff2") format("woff2"),
+    url("/assets/fonts/Georgia.otf") format("opentype"),
+    url("/assets/fonts/Georgia.svg#filename") format("svg");
+}
+
+@font-face {
+  font-family: "Arial";
+  src: url("/assets/fonts/Arialn.ttf");
+  src:
+    url("/assets/fonts/Arialn.woff") format("woff"),
+    url("/assets/fonts/Arialn.woff2") format("woff2"),
+    url("/assets/fonts/Arialn.otf") format("opentype"),
+    url("/assets/fonts/Arialn.svg#filename") format("svg");
+}
+
+
+:root {
+  --light-pink-color: #FAFAFA;
+  --lighter-pink-color: #F6F6F6;
+  --color-primary: #F1CDB3;
+  --color-white: #ffffff;
+  --color-dark: #292929;
+  --primary-hover: #FDDCC4;
+  --color-dark-about: #545454;
+  --color-nav-link: #CDCDCD;
+}
+
+*, html, body {
+  scroll-behavior: smooth !important;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: 'Georgia';
+}
+
+.wrapper  {
+  max-width: 1200px;
+  margin: 0 auto;
+  left: calc(50% - 1200px/2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.start_wrapper .wrapper {
+  padding: 3.75rem 0;
+}
+
+.start_wrapper, footer {
+  background: linear-gradient(to right, #5B483A, #262425, #211F20);
+}
+
+header .wrapper h2 {
+  font-size: 2rem;
+  line-height: 2.2rem;
+  color: var(--color-primary);
+  letter-spacing: 0.06em;
+}
+
+header .wrapper h3 {
+  font-size: 0.81rem;
+  line-height: 0.93rem; 
+  color: var(--color-white);
+  margin-top: 0.65rem;
+  font-family: 'Arial';
+  letter-spacing: 0.1em;
+}
+
+header .wrapper nav {
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+header .wrapper nav ul {
+  display: flex;
+  width: 80%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .wrapper nav ul li a {
+  color: var(--color-nav-link);
+  text-decoration: none;
+  line-height: 1.5rem;
+  font-size: 0.94rem;
+  font-family: 'Arial';
+  padding-bottom: 0.3rem;
+  align-self: end;
+}
+
+header .wrapper nav ul li a:hover {
+  color: var(--light-pink-color);
+  transition: all 0.3s ease 0s;
+}
+
+header .wrapper nav ul li .highlighted {
+  border-bottom: 3px solid var(--color-primary);
+  color: var(--light-pink-color);
+}
+
+header .wrapper nav .burger_icon {
+  display: none;
+  width: 1.88rem;
+  align-self: start;
+  cursor: pointer;
+}
+
+.sidenav {
+  display: none;
+  opacity: 0;
+}
+
+.headline_section .wrapper {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.headline_section .content_wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 2.63rem;
+  height: 20.13rem;
+}
+
+.headline_section .content_wrapper h1 {
+  font-size: 2.75rem;
+  line-height: 3.58rem;
+  color: var(--color-white);
+  width: 19.3rem;
+  align-self: start;
+  letter-spacing: 0;
+}
+
+.headline_section .content_wrapper p {
+  font-size: 0.94rem;
+  line-height: 1.5rem;
+  color: var(--light-pink-color);
+  width: 27rem;
+  font-family: 'Arial';
+}
+
+.headline_section .content_wrapper a {
+  align-self: start;
+}
+
+.headline_section .content_wrapper .get_know_button, .pets_cards li button, .pets_section .get_know_button {
+  background-color: var(--color-primary);
+  color: var(--color-dark);
+  border-radius: 6.25rem;
+  padding: 0.95rem 2.81rem; 
+  border: none;
+  align-self: start;
+  cursor: pointer;
+  font-size: 1.06rem;
+  line-height: 1.38rem;
+  letter-spacing: 0.06em;
+}
+
+.headline_section .content_wrapper .get_know_button:hover, .pets_cards li button:hover, .pets_section .get_know_button:hover, .pets_cards li .arrow_circles:hover, .donation_section button:hover {
+  background-color: var(--primary-hover);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+}
+
+.headline_section .wrapper div:last-child { 
+  max-width: 43.63rem;
+}
+
+.headline_section img {
+  max-width: 100%;
+}
+
+.about_section {
+  background-color: var(--color-white);
+}
+
+.about_section .wrapper {
+  max-width: 50rem;
+}
+
+.about_section img {
+  max-width: 18.75rem;
+  margin-right: 7.5rem;
+}
+
+.about_section h2, .pets_section h2, .help_section h2, .donation_section h2 {
+  font-size: 2.19rem;
+  line-height: 2.84rem;
+  color: var(--color-dark-about);
+  max-width: 23.13rem;
+  letter-spacing: 0.06em;
+}
+
+.about_section p, .donation_section p {
+  color: var(--color-dark-about);
+  font-size: 0.94rem;
+  line-height: 1.5rem;
+  margin-top: 1.56rem;
+  font-family: 'Arial';
+  width: 26.88rem;
+}
+
+.donation_section p:first-child {
+  width: 19.19rem;
+}
+
+.donation_section .donation_para {
+  width: 23.75rem
+}
+
+.pets_section, .donation_section {
+  background-color: var(--lighter-pink-color);
+  padding-top: 5rem;
+  padding-bottom: 6.25rem;
+}
+
+.pets_section .wrapper, .help_section .wrapper {
+  flex-direction: column;
+}
+
+.help_section, .about_section {
+  padding-top: 5rem;
+  padding-bottom: 6.25rem;
+}
+
+.pets_section h2, .help_section h2 {
+  width: 25rem;
+  text-align: center;
+}
+
+.pets_section .wrapper .pets_cards {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin: 3.75rem 0;
+}
+
+.pets_cards li {
+  background-color: var(--light-pink-color);
+  border-radius: 9px;
+}
+
+.pets_cards li:hover {
+  background-color: var(--color-white);
+  transition: all 0.3s ease 0s;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  cursor: pointer;
+}
+
+.pets_cards li:hover button {
+  background-color: var(--primary-hover);
+  transition: all 0.3s ease 0s;
+}
+
+.pets_cards li:first-child, li:last-child {
+  border-radius: 50%;
+}
+
+.pets_section .mobile_arrows {
+  display: none;
+}
+
+.pets_cards li .arrow_circles {
+  color: var(--color-dark);
+  border: 1px solid var(--primary-hover);
+  border-radius: 65%;
+  padding: 1rem;
+  display: flex;
+}
+
+.pets_cards li h4, .help_section li h4 {
+  color: var(--color-dark-about);
+  font-size: 1.25rem;
+  line-height: 1.42rem;
+  margin: 1.9rem 0;
+  letter-spacing: 0.06em;
+}
+
+.pets_cards .card_content {
+  text-align: center;
+}
+
+.pets_cards li button {
+  background-color: var(--light-pink-color);
+  color: var(--color-dark);
+  border: 1px solid var(--primary-hover);
+  margin-bottom: 2.5rem;
+}
+
+.pets_section .get_know_button {
+  align-self: center;
+}
+
+.help_section {
+  background-color: var(--color-white);
+}
+
+.help_section .first_grid {
+  display: grid;
+  grid: auto / repeat(5, minmax(8rem, 1fr));
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin: 3.5rem 0;
+  row-gap: 2.5rem;
+}
+
+.justify_end {
+  justify-self: end;
+}
+
+.help_section li {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.second_grid {
+  display: grid;
+  grid: auto / repeat(auto-fit, minmax(8rem, 1fr));
+  justify-content: center;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.help_section li h4 {
+  text-align: center;
+}
+
+.donation_section .wrapper {
+  max-width: 57.13rem;
+  margin: 0 auto;
+}
+
+.donation_section .donation_para {
+  color: #B2B2B2;
+  font-family: 'Arial';
+  font-style: italic;
+  width: 23.75rem;
+}
+
+.donation_section .content_wrapper {
+  margin-left: 1.88rem;
+}
+
+.donation_section .donation_button {
+  background-color: var(--color-primary);
+  color: var(--color-dark-about);
+  padding: 0.7rem 0;
+  margin: 1.25rem 0;
+  border: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 1.25rem;
+  line-height: 1.38rem;
+  border-radius: 9px;
+  cursor: pointer;
+  width: 21.88rem;
+}
+
+.donation_section .donation_button:hover {
+  background-color: var(--primary-hover);
+  transition: all 0.3s ease 0s;
+}
+
+.donation_section .donation_button {
+  width: 21.81rem
+}
+
+footer .wrapper {
+  padding: 3.5rem 2.5rem;
+  padding-bottom: 0;
+}
+
+footer h2 {
+  padding-top: 0.3rem;
+  color: var(--color-white);
+  font-size: 2.19rem;
+  line-height: 2.84rem;
+  width: 17.38rem;
+  letter-spacing: 0.05em;
+}
+
+footer .wrapper .contact_info, .location_info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+  height: 19.38rem;
+  color: var(--color-primary);
+  font-size: 1.25rem;
+  line-height: 1.44rem;
+  letter-spacing: 0.06em;
+}
+
+footer .wrapper div a:last-child {
+  padding-bottom: 3.5rem;
+}
+
+footer .wrapper div a {
+  display: flex;
+  align-items: center;
+  color: var(--color-primary);
+}
+
+footer .wrapper div a span {
+  margin-left: 1.25rem;
+}
+
+@media (max-width: 1220px) {
+  .wrapper  {
+    max-width: 93.75%;
+  }
+}
+
+@media (max-width: 1150px) {
+  .donation_section .wrapper {
+    flex-direction: column-reverse;
+  }
+
+  .donation_section .content_wrapper {
+    margin: 0 auto;
+    margin-bottom: 3.75rem;
+  }
+
+  footer .wrapper {
+    max-width: 83.3%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  footer .wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+
+  footer .wrapper div {
+    margin: 0 auto;
+  }
+
+  footer .image_wrapper {
+    margin: 0 auto;
+    grid-area: 2 / 1 / span 1/ span 2;
+  }
+}
+
+@media (max-width: 956px) {
+  .headline_section .wrapper {
+    flex-direction: column;
+  }
+  
+  .headline_section .wrapper .content_wrapper {
+    height: auto;
+    margin-right: 0;
+  }
+
+  .headline_section .wrapper .content_wrapper h1, p {
+    margin-bottom: 3.56rem;
+  }
+
+  .headline_section .wrapper .content_wrapper a {
+    margin-bottom: 6.25rem;
+  }
+
+  .headline_section .wrapper .content_wrapper a {
+    align-self: center;
+  }
+
+  .headline_section .wrapper div:last-child { 
+    max-width: 35.56rem;
+  }
+
+  .about_section .wrapper {
+    flex-direction: column-reverse;
+  }
+
+  .about_section .wrapper {
+    max-width: 56%;
+    margin: 0 auto;
+  }
+
+  .about_section .wrapper .text_content {
+    margin-bottom: 5rem;
+  }
+
+  .about_section img {
+    max-width: 16.25rem;
+    margin: 0 auto;
+  }
+
+  .pets_cards .woody {
+    display: none;
+  }
+
+  .help_section .first_grid {
+    grid: auto / repeat(3, minmax(8rem, 1fr));
+  }
+
+  .justify_end {
+    justify-self: center;
+  }
+}
+
+@media (max-width: 845px) {
+  header .wrapper nav {
+    width: 70%;
+  }
+}
+
+@media (max-width: 700px) {
+  header .wrapper div {
+    width: 50%
+  }
+
+  header .wrapper nav {
+    width: 50%;
+  }
+
+  header .wrapper nav ul {
+    display: none;
+  }
+
+  header .wrapper nav .burger_icon {
+    display: flex;
+    height: 1.25rem;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.5s;
+    z-index: 10;
+  }
+
+  header .wrapper nav .burger_icon .bar {
+    width: 1.88rem;
+    border: 1px solid var(--color-primary);
+  }
+
+  .headline_section .wrapper .content_wrapper a {
+    margin-bottom: 6.25rem;
+  }
+
+  .sidenav.open {
+    display: block;
+    height: 100%;
+    width: 90%;
+    max-width: 20rem;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: var(--color-dark);
+    overflow-x: hidden;
+    padding-top: 3.75rem;
+    animation: fade_in_show 2s forwards;
+  }
+
+  #sidenav ul {
+    margin: 0 auto;
+    margin-top: 10rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 50vh;
+  }
+
+  #sidenav ul li a {
+    color: var(--color-nav-link);
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  #sidenav ul li a:hover {
+    color: var(--light-pink-color);
+  }
+  
+  @keyframes fade_in_show {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+
+  header .wrapper nav .burger_icon.open {
+    transform: rotate(90deg);
+  }
+
+  header .wrapper nav .burger_icon.open .bar {
+    border: 1px solid var(--color-primary);
+  }
+
+  .pets_cards .jennifer {
+    display: none;
+  }
+
+  footer .wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+@media (max-width: 630px) {
+  .headline_section .wrapper .content_wrapper h1, p {
+    max-width: 18.75rem;
+  }
+
+  .headline_section .wrapper div:last-child { 
+    max-width: 28.13rem;
+  }
+
+  .headline_section .wrapper .content_wrapper a {
+    margin-bottom: 6.25rem;
+  }
+
+  .about_section .wrapper {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .about_section p {
+    max-width: 16.88rem;
+  }
+
+  .about_section h2, .pets_section h2, .donation_section h2, .help_section h2 {
+    text-align: center;
+    max-width: 18.75rem;
+    font-size: 1.56rem;
+  }
+
+  .pets_cards li:first-child, li:last-child {
+    display: none;
+  }
+
+  .pets_section .wrapper .pets_cards {
+    justify-content: center;
+  }
+
+  .pets_section .mobile_arrows {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 12rem;
+    margin-bottom: 2.63rem;
+  }
+
+  .pets_section .mobile_arrows .arrow_circles {
+    color: var(--color-dark);
+    border: 1px solid var(--primary-hover);
+    border-radius: 65%;
+    padding: 1rem;
+    display: flex;
+  }
+
+  .pets_section .mobile_arrows .arrow_circles:hover {
+    background-color: var(--primary-hover);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+  }
+
+  .help_section .first_grid {
+    grid: auto / repeat(2, minmax(8rem, 1fr));
+  }
+
+  .help_section .first_grid li:last-child {
+    display: flex;
+  }
+
+  .donation_section .donation_button {
+    width: 17.56rem;
+    font-size: 0.94rem;
+  }
+
+  .donation_section .donation_para {
+    width: 17.5rem;
+    align-self: center;
+  }
+
+  .donation_section .content_wrapper .bank_para {
+    text-align: center;
+    width: 17.06rem;
+  }
+
+  .donation_section .golden_puppy img {
+    width: 16.25rem;
+    margin: 0 auto;
+    align-self: center;
+  }
+}
+
+@media (max-width: 430px) {
+  header .wrapper div {
+    z-index: 20;
+  }
+
+  header .wrapper div {
+    width: 70%
+  }
+
+  header .wrapper nav {
+    width: 30%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .headline_section .wrapper .content_wrapper h1 {
+    font-size: 1.56rem;
+    text-align: center;
+    margin-bottom: 2.5rem;
+  }
+
+  .headline_section .wrapper div:last-child { 
+    max-width: 16.25rem;
+  }
+
+  footer .wrapper h2 {
+    font-size: 1.56rem;
+  }
+
+  footer .wrapper .footer_content_wrapper a span {
+    width: 11.94rem;
+  }
+
+  footer .wrapper .footer_content_wrapper a {
+    text-align: center;
+  }
+  footer .wrapper .footer_content_wrapper a .location {
+    margin-left: 0;
+    width: 16rem;
+  }
+
+  footer .image_wrapper {
+    padding-bottom: 0;
+  }
+
+  footer .image_wrapper img {
+    width: 16.25rem;
+  }
+}
+
+
+@media (max-width: 350px) {
+  .sidenav.open {
+    width: 100%;
+  }
+  footer .wrapper div {
+    margin: 0;
+  }
+}
