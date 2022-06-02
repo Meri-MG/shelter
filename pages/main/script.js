@@ -1,4 +1,6 @@
-const id = (id) => document.getElementById(id);
+import { id, getData, classes } from './utils.js';
+import { showBtns } from './modal.js';
+
 let burger = id('burger_icon'),
   sidenav = id('sidenav');
 
