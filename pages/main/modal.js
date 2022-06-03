@@ -1,6 +1,8 @@
 import { getData, classes, id } from './utils.js';
+import { createCard } from './carousel.js';
 
 export const showBtns = classes('pets_button');
+const mainBody = document.querySelector('.about_section');
 
 let modal = id('modal');
 
@@ -16,23 +18,23 @@ const displayPets = (obj, index) => {
     diseases,
     parasites,
   }) => {
-    return `<div class="popup-div" id="${index}">
-              <div class="header-popup">
+    return `<div class="modal_wrapper" id="${index}">
+              <div class="close_wrapper">
                 <img src="../../assets/images/closebtn.png" class="closingIcon" alt="close-icon">
               </div>
-              <div class="project-popup">
-                <div>
-                  <img src="${img}" alt="image-popup" class="image-popup">
+              <div class="modal_content">
+                <div class="modal_img_div">
+                  <img src="${img}" alt=${name} class="modal_img">
                 </div>
-                <div class="info-popup">
-                  <h3 class="title-popup">${name}</h3>
+                <div class="modal_info">
+                  <h3 class="modal_title">${name}</h3>
                   <h4>${type} - ${breed}</h4>
                   <p>${description}</p>
-                  <ul class="">
-                    <li class="list-popup"><span>Age: </span>${age}</li>
-                    <li class="list-popup"><span>Inoculations: </span>${inoculations}</li>
-                    <li class="list-popup"><span>Diseases: </span>${diseases}</li>
-                    <li class="list-popup"><span>Parasites: </span>${parasites}</li>
+                  <ul class="modal_list">
+                    <li class="modal_item"><span>Age: </span>${age}</li>
+                    <li class="modal_item"><span>Inoculations: </span>${inoculations}</li>
+                    <li class="modal_item"><span>Diseases: </span>${diseases}</li>
+                    <li class="modal_item"><span>Parasites: </span>${parasites}</li>
                   </ul>
                 </div>
               </div>
@@ -41,27 +43,31 @@ const displayPets = (obj, index) => {
   obj.forEach((pet) => {
     if (pet.id === index) {
       modal.innerHTML += modalHTML(pet);
-      // modal.classList.add('open');
-      // mainBody.classList.add('fixed');
+      modal.classList.add('active');
+      mainBody.classList.add('fixed');
     }
   });
-  const popupDIV = document.querySelector('.popup-div');
-  const closeBtn = classes('closingIcon');
+  const popupDIV = document.querySelector('.modal_wrapper');
+  const closeBtn = classes('close_wrapper');
   [...closeBtn].forEach((btn) => {
     btn.addEventListener('click', () => {
-      // mainBody.classList.remove('fixed');
-      // popup.classList.remove('open');
+      mainBody.classList.remove('fixed');
+      modal.classList.remove('active');
       popupDIV.remove();
     });
   });
 };
 
-getData().then((petsList) => {
-  [...showBtns].forEach((btn, index) => {
-    btn.addEventListener('click', () => {
-      if (index === petsList[index].id) {
-        displayPets(petsList, petsList[index].id);
-      }
+getData()
+  .then((petsList) => {
+    [...showBtns].forEach((btn, index) => {
+      btn.addEventListener('click', () => {
+        if (index === petsList[index].id) {
+          displayPets(petsList, petsList[index].id);
+        }
+      });
     });
+  })
+  .catch((error) => {
+    console.error('There has been a problem with your fetch operation:', error);
   });
-});

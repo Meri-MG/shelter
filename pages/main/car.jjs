@@ -1,0 +1,61 @@
+import { getData, classes, id } from './utils.js';
+
+export const prev = id('left_handle');
+export const next = id('right_handle');
+
+const slider = document.querySelector('.pets_cards');
+const petsCards = slider.children;
+let clones = [];
+// let items = [];
+
+let carouselWidth = document.querySelector('.pets_section').offsetWidth;
+
+window.addEventListener('resize', () => {
+  carouselWidth = document.querySelector('.pets_section').offsetWidth;
+});
+
+const carouselCards = ({ id, name, img }) => {
+  return `<li class='card_item' id=${id}>
+  <div>
+    <img src=${img} alt=${name}/>
+  </div>
+  <div class="card_content">
+    <h4>${name}</h4>
+    <button type="button" class="pets_button">Learn more</button>
+  </div>
+</li>`;
+};
+
+getData().then((petsList) => {
+  let random = petsList.sort(() => Math.random() - 0.5);
+  random.forEach((pet) => {
+    slider.innerHTML += carouselCards(pet);
+    // items.push(pet);
+  });
+});
+// let items = [...document.querySelectorAll('.card_item')];
+// const getClones = () => {
+//   let clone;
+//   items.forEach((item) => {
+//     clone = item.cloneNode(true);
+//     clone.classList.add('clone');
+//     slider.appendChild(clone);
+//     clones.push(clone);
+//   });
+//   console.log(clone, 'clone');
+// };
+// getClones();
+// console.log(clones, 'clones');
+// console.log(items, 'items');
+
+let index = 0;
+
+next.addEventListener('click', () => {
+  index++;
+  slider.style.transform = `translateX(-${index * carouselWidth}px)`;
+});
+
+prev.addEventListener('click', () => {
+  index--;
+  slider.style.transform = `translateX(-${index * carouselWidth}px)`;
+});

@@ -1,5 +1,6 @@
 import { id, getData, classes } from './utils.js';
 import { showBtns } from './modal.js';
+import { prev, next } from './carousel.js';
 
 let burger = id('burger_icon'),
   sidenav = id('sidenav');
