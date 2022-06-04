@@ -1,4 +1,4 @@
-import { id, getData, classes } from './utils.js';
+import { id } from './utils.js';
 import { showBtns } from './modal.js';
 import { prev, next } from './carousel.js';
 

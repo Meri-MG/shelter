@@ -2,6 +2,7 @@ import { getData, classes, id } from './utils.js';
 import { createCard } from './carousel.js';
 
 export const showBtns = classes('pets_button');
+const cards = document.getElementsByClassName('card_item');
 const mainBody = document.querySelector('.about_section');
 
 let modal = id('modal');
@@ -41,7 +42,7 @@ const displayPets = (obj, index) => {
             </div>`;
   };
   obj.forEach((pet) => {
-    if (pet.id === index) {
+    if (pet.id == index) {
       modal.innerHTML += modalHTML(pet);
       modal.classList.add('active');
       mainBody.classList.add('fixed');
@@ -58,16 +59,21 @@ const displayPets = (obj, index) => {
   });
 };
 
-getData()
-  .then((petsList) => {
-    [...showBtns].forEach((btn, index) => {
-      btn.addEventListener('click', () => {
-        if (index === petsList[index].id) {
-          displayPets(petsList, petsList[index].id);
-        }
+export const printPopup = () => {
+  getData()
+    .then((petsList) => {
+      [...cards].forEach((card, index) => {
+        card.addEventListener('click', () => {
+          let index = card.getAttribute('id');
+          displayPets(petsList, index);
+        });
       });
+    })
+    .catch((error) => {
+      console.error(
+        'There has been a problem with your fetch operation:',
+        error
+      );
     });
-  })
-  .catch((error) => {
-    console.error('There has been a problem with your fetch operation:', error);
-  });
+};
+printPopup();

@@ -1,11 +1,10 @@
 import { getData, id } from './utils.js';
+import { printPopup } from './modal.js';
 
 export const prev = id('left_handle');
 export const next = id('right_handle');
 
 const slider = document.querySelector('.pets_cards');
-let slideIndex = 1;
-let isMoving = false;
 
 export const createCard = ({ id, name, img }) => {
   return `<li class='card_item' id=${id}>
@@ -19,39 +18,36 @@ export const createCard = ({ id, name, img }) => {
 </li>`;
 };
 
-const moveSlides = () => {
-  slider.style.transform = `translateX(-${slideIndex * 100}%)`;
-};
-
-// move when clicked
-
-const moveHandler = (direction) => {
-  isMoving = true;
-  slider.style.transition = `transform 450ms ease-in-out`;
-  direction !== 'right' ? (slideIndex -= 1) : (slideIndex += 1);
-  moveSlides();
+const renderCards = (obj) => {
+  let random;
+  if (screen.width >= 1280) {
+    random = obj.sort(() => 0.5 - Math.random()).slice(0, 3);
+  }
+  if (screen.width < 1280 && screen.width >= 768) {
+    random = obj.sort(() => 0.5 - Math.random()).slice(0, 2);
+  }
+  if (screen.width < 768) {
+    random = obj.sort(() => 0.5 - Math.random()).slice(0, 1);
+  }
+  slider.innerHTML = random.map(createCard).join('');
 };
 
 getData().then((petsList) => {
-  let random = petsList.sort(() => Math.random() - 0.5);
-  random.push(random[0]);
-  random.unshift(random[random.length - 2]);
-  slider.innerHTML = random.map(createCard).join('');
-  // moveSlides();
+  renderCards(petsList);
 });
 
 // click right btn
 next.addEventListener('click', () => {
-  // if (isMoving) {
-  //   return;
-  // }
-  moveHandler('right');
+  getData().then((petsList) => {
+    renderCards(petsList);
+    printPopup();
+  });
 });
 
 // click left btn
 prev.addEventListener('click', () => {
-  // if (!isMoving) {
-  //   return;
-  // }
-  moveHandler('left');
+  getData().then((petsList) => {
+    renderCards(petsList);
+    printPopup();
+  });
 });
