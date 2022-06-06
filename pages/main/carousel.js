@@ -5,6 +5,8 @@ const prev = document.querySelector('.left_handle');
 const next = document.querySelector('.right_handle');
 const desktopArr1 = id('desktop_1');
 const desktopArr2 = id('desktop_2');
+const mobPrev = id('left_handle');
+const mobNext = id('right_handle');
 
 const slider = document.querySelector('.pets_cards');
 const sliderContainer = document.querySelector('.slider_container');
@@ -57,6 +59,21 @@ next.addEventListener('click', () => {
 
 // click left btn
 prev.addEventListener('click', () => {
+  getData().then((petsList) => {
+    renderCards(petsList);
+    printPopup();
+  });
+});
+
+mobNext.addEventListener('click', () => {
+  getData().then((petsList) => {
+    renderCards(petsList);
+    printPopup();
+  });
+});
+
+// click left btn
+mobPrev.addEventListener('click', () => {
   getData().then((petsList) => {
     renderCards(petsList);
     printPopup();
