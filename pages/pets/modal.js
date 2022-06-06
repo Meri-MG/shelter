@@ -1,8 +1,7 @@
-import { getData, classes, id } from './utils.js';
-import { createCard } from './carousel.js';
+import { getData, classes, id } from '../main/utils.js';
 
 export const cards = document.getElementsByClassName('card_item');
-const aboutSection = document.querySelector('.about_section');
+const petsSection = document.querySelector('.pets_section');
 let mainBody = document.querySelector('.main_body');
 
 let modal = id('modal');
@@ -45,7 +44,7 @@ const displayPets = (obj, index) => {
     if (pet.id == index) {
       modal.innerHTML += modalHTML(pet);
       modal.classList.add('active');
-      aboutSection.classList.add('fixed');
+      petsSection.classList.add('fixed');
       mainBody.classList.add('open');
     }
   });
@@ -53,7 +52,7 @@ const displayPets = (obj, index) => {
   const closeBtn = classes('close_wrapper');
   [...closeBtn].forEach((btn) => {
     btn.addEventListener('click', () => {
-      aboutSection.classList.remove('fixed');
+      petsSection.classList.remove('fixed');
       modal.classList.remove('active');
       mainBody.classList.remove('open');
       popupDIV.remove();
@@ -79,4 +78,3 @@ export const printPopup = () => {
     });
 };
 printPopup();
-console.log('hi');

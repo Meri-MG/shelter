@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="./reset.css" />
     <link rel="stylesheet" href="./style.css" />
   </head>
-  <body>
+  <body class="main_body">
     <header>
       <div class="wrapper">
         <div>
@@ -66,109 +66,28 @@
           are looking for a house
         </h2>
         <hr />
-        <ul class="pets_cards" id="first_card_row">
-          <li>
-            <div>
-              <img src="../../assets/images/katrine.png" alt="black_cat" />
-            </div>
-            <div class="card_content">
-              <h4>Katrine</h4>
-              <button type="button" class="pets_button">Learn more</button>
-            </div>
-          </li>
-          <li>
-            <div>
-              <img src="../../assets/images/jennifer.png" alt="white_puppy" />
-            </div>
-            <div class="card_content">
-              <h4>Jennifer</h4>
-              <button type="button" class="pets_button">Learn more</button>
-            </div>
-          </li>
-          <li>
-            <div>
-              <img src="../../assets/images/woody.png" alt="white_dog" />
-            </div>
-            <div class="card_content">
-              <h4>Woody</h4>
-              <button type="button" class="pets_button">Learn more</button>
-            </div>
-          </li>
-          <li>
-            <div>
-              <img
-                src="../../assets/images/sophia.png"
-                alt="puppy with a black ear"
-              />
-            </div>
-            <div class="card_content">
-              <h4>Sophia</h4>
-              <button type="button" class="pets_button">Learn more</button>
-            </div>
-          </li>
-        </ul>
-        <ul class="pets_cards" id="second_card_row">
-          <li>
-            <div>
-              <img src="../../assets/images/timmy.png" alt="gray_cat" />
-            </div>
-            <div class="card_content">
-              <h4>Timmy</h4>
-              <button type="button" class="pets_button">Learn more</button>
-            </div>
-          </li>
-          <li>
-            <div>
-              <img
-                src="../../assets/images/charly.png"
-                alt="charly with big eyes"
-              />
-            </div>
-            <div class="card_content">
-              <h4>Charly</h4>
-              <button type="button" class="pets_button">Learn more</button>
-            </div>
-          </li>
-          <li>
-            <div>
-              <img src="../../assets/images/scarlett.png" alt="small doggy" />
-            </div>
-            <div class="card_content">
-              <h4>Scarlett</h4>
-              <button type="button" class="pets_button">Learn more</button>
-            </div>
-          </li>
-          <li>
-            <div>
-              <img src="../../assets/images/freddie.png" alt="striped_cat" />
-            </div>
-            <div class="card_content">
-              <h4>Freddie</h4>
-              <button type="button" class="pets_button">Learn more</button>
-            </div>
-          </li>
-        </ul>
+        <ul class="pets_cards" id="first_card_row"></ul>
         <ul class="pagination">
           <li>
-            <button class="pagination_button disabled" disabled>
+            <button class="pagination_button" id="first_btn">
               <img src="../../assets/icons/arrows_left.png" alt="arrows_left" />
             </button>
           </li>
           <li>
-            <button class="pagination_button disabled" disabled>
+            <button class="pagination_button disabled" id="prev_btn">
               <img src="../../assets/icons/arrow_left.png" alt="arrow_left" />
             </button>
           </li>
           <li>
-            <button class="pagination_button active">1</button>
+            <button class="pagination_button active" id="page_num"></button>
           </li>
           <li>
-            <button class="pagination_button hover_active">
+            <button class="pagination_button hover_active" id="next_btn">
               <img src="../../assets/icons/arrow_right.png" alt="arrow_right" />
             </button>
           </li>
           <li>
-            <button class="pagination_button hover_active">
+            <button class="pagination_button hover_active" id="last_btn">
               <img
                 src="../../assets/icons/arrows_right.png"
                 alt="arrows_right"
@@ -178,6 +97,7 @@
         </ul>
       </div>
     </section>
+    <section class="modal" id="modal"></section>
     <footer id="contacts">
       <div class="wrapper">
         <div class="footer_content_wrapper">
@@ -220,6 +140,6 @@
         </div>
       </div>
     </footer>
-    <script src="./script.js"></script>
+    <script type="module" src="./script.js"></script>
   </body>
 </html>

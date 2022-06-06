@@ -1,12 +1,12 @@
 import { getData, id } from './utils.js';
 import { printPopup } from './modal.js';
 
-export const prev = id('left_handle');
-export const next = id('right_handle');
+const prev = id('left_handle');
+const next = id('right_handle');
 
 const slider = document.querySelector('.pets_cards');
 
-export const createCard = ({ id, name, img }) => {
+const createCard = ({ id, name, img }) => {
   return `<li class='card_item' id=${id}>
   <div>
     <img src=${img} alt=${name}/>
@@ -51,3 +51,5 @@ prev.addEventListener('click', () => {
     printPopup();
   });
 });
+
+export { next, prev, slider, createCard };

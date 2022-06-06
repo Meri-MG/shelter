@@ -1,4 +1,7 @@
-const id = (id) => document.getElementById(id);
+import { renderCards } from './pagination.js';
+import { id } from '../main/utils.js';
+import { cards } from './modal.js';
+
 let burger = id('burger_icon'),
   sidenav = id('sidenav'),
   logoTitle = id('logo_title'),
@@ -18,4 +21,3 @@ burger.addEventListener('click', () => {
   toggleMenu(logoTitle);
   toggleMenu(logoSub);
 });
-console.log(burger);

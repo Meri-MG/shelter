@@ -1,8 +1,10 @@
-export const id = (id) => document.getElementById(id);
-export const classes = (classes) => document.getElementsByClassName(classes);
+const id = (id) => document.getElementById(id);
+const classes = (classes) => document.getElementsByClassName(classes);
 
-export const getData = async () => {
+const getData = async () => {
   const response = await fetch('./pets.json');
   const booksList = await response.json();
   return booksList;
 };
+
+export { id, classes, getData };

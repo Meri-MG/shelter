@@ -41,6 +41,10 @@ body {
   font-family: 'Georgia';
 }
 
+body.open{
+  overflow-y: hidden;
+}
+
 .wrapper  {
   max-width: 1200px;
   margin: 0 auto;
@@ -456,6 +460,10 @@ footer .wrapper div a span {
   background-color: rgba(41, 41, 41, .6)
 }
 
+.modal:hover .closingIcon {
+  background-color: var(--color-primary);
+}
+
 .modal.active {
   left: 0;
   right: 0;
@@ -799,10 +807,6 @@ footer .wrapper div a span {
     border: 1px solid var(--color-primary);
   }
 
-  /* .pets_cards .jennifer {
-    display: none;
-  } */
-
   footer .wrapper {
     display: flex;
     justify-content: center;
@@ -845,6 +849,10 @@ footer .wrapper div a span {
     margin-bottom: 6.25rem;
   }
 
+  header .wrapper div {
+    z-index: 20;
+  }
+
   .about_section .wrapper {
     width: 90%;
     margin: 0 auto;
@@ -859,10 +867,6 @@ footer .wrapper div a span {
     max-width: 18.75rem;
     font-size: 1.56rem;
   }
-
-  /* .pets_cards li:first-child, li:last-child {
-    display: none;
-  } */
 
   .pets_section .wrapper .pets_cards {
     justify-content: center;
@@ -921,10 +925,6 @@ footer .wrapper div a span {
 }
 
 @media (max-width: 430px) {
-  header .wrapper div {
-    z-index: 20;
-  }
-
   header .wrapper div {
     width: 70%
   }
