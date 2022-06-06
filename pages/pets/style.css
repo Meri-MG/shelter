@@ -39,6 +39,10 @@ body {
   font-family: 'Georgia';
 }
 
+body.open{
+  overflow-y: hidden;
+}
+
 .wrapper  {
   max-width: 1200px;
   margin: 0 auto;
@@ -235,7 +239,7 @@ header .wrapper nav ul li .highlighted {
   transition: all 0.3s ease 0s;
 }
 
-.pagination .disabled {
+#next_btn.disabled, #prev_btn.disabled, #last_btn.disabled, #first_btn.disabled {
   border: 1px solid #B2B2B2;
   cursor: not-allowed;
   pointer-events: all !important;
@@ -304,6 +308,131 @@ footer .wrapper .image_wrapper img {
   align-self: flex-end
 }
 
+/* -----modal-----*/
+
+.fixed {
+  position: fixed;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(41, 41, 41, .6)
+}
+
+.modal:hover .closingIcon {
+  background-color: var(--color-primary);
+}
+
+.modal.active {
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  z-index: 50;
+  overflow-y: scroll;
+}
+
+.modal_wrapper {
+  position: relative;
+  margin: 11.75rem auto;
+}
+
+.modal_wrapper div {
+  margin: 0 auto;
+  
+}
+
+.modal_wrapper .modal_content {
+  display: flex;
+  justify-content: space-between;
+  max-width: 70.3%;
+  background-color: var(--light-pink-color);
+  border-radius: 9px;
+}
+
+.modal_wrapper .modal_content .modal_img_div {
+  width: 65%;
+}
+
+.modal_wrapper .modal_content .modal_img {
+  border-radius: 9px;
+  width: 100%;
+}
+
+.modal_wrapper .modal_info {
+  padding: 3.125rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 45%;
+  font-size: 15px;
+}
+
+.modal_wrapper .modal_info h3 {
+  font-size: 35px;
+}
+
+.modal_wrapper .modal_info h4 {
+  font-size: 20px;
+  margin-top: 0.625rem
+}
+
+.modal_wrapper .modal_info p {
+  letter-spacing: 0.06em;
+  width: 21.875rem;
+  line-height: 1.031rem;
+  margin: 2.5rem 0;
+}
+
+.modal_wrapper .modal_info .modal_list .modal_item {
+  margin: 0.688rem 0.6rem;
+}
+
+.modal_wrapper .modal_info .modal_list .modal_item::before {
+  content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+  color: var(--color-primary); /* Change the color */
+  font-weight: bold; /* If you want it to be bold */
+  display: inline-block; /* Needed to add space between the bullet and the text */
+  width: 1em; /* Also needed for space (tweak if needed) */
+  margin-left: -1em; /* Also needed for space (tweak if needed) */
+}
+
+.modal_wrapper .modal_info .modal_list .modal_item span {
+  font-weight: 600;
+}
+
+.modal_section.hide {
+  display: none;
+}
+
+.modal_wrapper .close_wrapper {
+  max-width: 78%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: end;
+  align-items: flex-end;
+}
+
+.closingIcon {
+  width: 12px;
+  height: 12px;
+  border: 2px solid var(--color-primary);
+  border-radius: 50%;
+  padding: 1.25rem;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.closingIcon:hover {
+  background-color: var(--color-primary)
+}
+
+/* --xx---modal---xx--*/
 
 @media (max-width: 1220px) {
   .wrapper  {
@@ -352,6 +481,25 @@ footer .wrapper .image_wrapper img {
   }
 }
 
+@media (max-width: 956px) {
+  .modal_wrapper .modal_content {
+    max-width: 65%;
+  }
+
+  .modal_wrapper .close_wrapper {
+    max-width: 73%;
+  }
+
+  .modal_wrapper .modal_info p {
+    width: 16.25rem;
+    font-size: 13px;
+  }
+
+  .modal_wrapper .modal_info h4 {
+    font-size: 23px;
+  }
+}
+
 @media (max-width: 845px) {
   header .wrapper nav {
     width: 70%;
@@ -366,6 +514,35 @@ footer .wrapper .image_wrapper img {
     width: 100%;
     gap: 0;
     margin: 0 0;
+  }
+
+  .modal_wrapper .modal_content .modal_img_div {
+    width: 350px;
+  }
+
+  .modal_wrapper .modal_content .modal_img_div .modal_img {
+    width: 350px;
+  }
+
+  .modal_wrapper .modal_info {
+    width: 280px;
+    padding-left: 0;
+  }
+
+  .modal_wrapper .modal_info p {
+    width: 260px;
+  }
+
+  .modal_wrapper .modal_info .modal_list .modal_item {
+    font-size: 15px;
+  }
+
+  .modal_wrapper .modal_content {
+    max-width: 630px;
+  }
+
+  .modal_wrapper .close_wrapper {
+    max-width: 700px;
   }
 }
 
@@ -471,6 +648,27 @@ footer .wrapper .image_wrapper img {
     align-items: center;
     text-align: center;
   }
+
+  .modal_wrapper .modal_img_div {
+    display: none;
+  }
+
+  .modal_wrapper .modal_info {
+    padding: 3.125rem;
+    width: 100%;
+  }
+
+  .modal_wrapper .modal_info p {
+    width: 100%;
+  }
+
+  .modal_wrapper .modal_content {
+    max-width: 60%;
+  }
+
+  .modal_wrapper .close_wrapper {
+    max-width: 74%;
+  }
 }
 
 @media (max-width: 430px) {
@@ -511,6 +709,18 @@ footer .wrapper .image_wrapper img {
     margin-left: 0;
     width: 16rem;
   }
+
+  .modal_wrapper .modal_info h3 {
+    align-self: center;
+  }
+
+  .modal_wrapper .modal_info {
+    padding: 2rem;
+  }
+
+  .modal_wrapper .close_wrapper {
+    max-width: 80%;
+  }
 }
 
 
@@ -520,6 +730,14 @@ footer .wrapper .image_wrapper img {
   }
   footer .wrapper div {
     margin: 0;
+  }
+
+  .modal_wrapper .modal_info {
+    padding: .6rem;
+  }
+
+  .modal_wrapper .close_wrapper {
+    max-width: 90%;
   }
 }
 

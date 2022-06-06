@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="./reset.css" />
     <link rel="stylesheet" href="./style.css" />
   </head>
-  <body>
+  <body class="main_body">
     <div class="start_wrapper">
       <header>
         <div class="wrapper">
@@ -108,63 +108,42 @@
       <div class="wrapper">
         <h2>Our friends who are looking for a house</h2>
         <hr />
-        <ul class="pets_cards">
-          <li>
-            <div class="arrow_circles">
+        <div class="slider_container">
+          <button class="arrow_circles left_handle" id="desktop_1">
+            <img src="../../assets/icons/longArrowLeft.png" alt="Arrow-left" />
+          </button>
+          <ul class="pets_cards"></ul>
+          <button class="arrow_circles right_handle" id="desktop_2">
+            <img
+              src="../../assets/icons/longArrowRight.png"
+              alt="Arrow-right"
+            />
+          </button>
+          <div class="mobile_arrows">
+            <!-- <div class="arrow_circles">
               <img
                 src="../../assets/icons/longArrowLeft.png"
                 alt="Arrow-left"
               />
             </div>
-          </li>
-          <li>
-            <div>
-              <img src="../../assets/images/pets-katrine.png" alt="black_cat" />
-            </div>
-            <div class="card_content">
-              <h4>Katrine</h4>
-              <button type="button" class="pets_button">Learn more</button>
-            </div>
-          </li>
-          <li class="jennifer">
-            <div>
-              <img
-                src="../../assets/images/pets-jennifer.png"
-                alt="white_puppy"
-              />
-            </div>
-            <div class="card_content">
-              <h4>Jennifer</h4>
-              <button type="button" class="pets_button">Learn more</button>
-            </div>
-          </li>
-          <li class="woody">
-            <div>
-              <img src="../../assets/images/pets-woody.png" alt="white_dog" />
-            </div>
-            <div class="card_content">
-              <h4>Woody</h4>
-              <button type="button" class="pets_button">Learn more</button>
-            </div>
-          </li>
-          <li>
             <div class="arrow_circles">
               <img
                 src="../../assets/icons/longArrowRight.png"
                 alt="Arrow-right"
               />
-            </div>
-          </li>
-        </ul>
-        <div class="mobile_arrows">
-          <div class="arrow_circles">
-            <img src="../../assets/icons/longArrowLeft.png" alt="Arrow-left" />
-          </div>
-          <div class="arrow_circles">
-            <img
-              src="../../assets/icons/longArrowRight.png"
-              alt="Arrow-right"
-            />
+            </div> -->
+            <button class="arrow_circles left_handle">
+              <img
+                src="../../assets/icons/longArrowLeft.png"
+                alt="Arrow-left"
+              />
+            </button>
+            <button class="arrow_circles right_handle">
+              <img
+                src="../../assets/icons/longArrowRight.png"
+                alt="Arrow-right"
+              />
+            </button>
           </div>
         </div>
         <a href="../pets/index.html" class="get_know_button"
@@ -270,6 +249,7 @@
         </div>
       </div>
     </section>
+    <section class="modal" id="modal"></section>
     <footer id="contacts">
       <div class="wrapper">
         <div class="contact_info">
@@ -312,6 +292,6 @@
         </div>
       </div>
     </footer>
-    <script src="./script.js"></script>
+    <script type="module" src="./script.js"></script>
   </body>
 </html>
