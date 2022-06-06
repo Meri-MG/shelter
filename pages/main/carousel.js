@@ -1,10 +1,13 @@
 import { getData, id } from './utils.js';
 import { printPopup } from './modal.js';
 
-const prev = id('left_handle');
-const next = id('right_handle');
+const prev = document.querySelector('.left_handle');
+const next = document.querySelector('.right_handle');
+const desktopArr1 = id('desktop_1');
+const desktopArr2 = id('desktop_2');
 
 const slider = document.querySelector('.pets_cards');
+const sliderContainer = document.querySelector('.slider_container');
 
 const createCard = ({ id, name, img }) => {
   return `<li class='card_item' id=${id}>
@@ -34,6 +37,14 @@ const renderCards = (obj) => {
 
 getData().then((petsList) => {
   renderCards(petsList);
+});
+
+window.addEventListener('resize', () => {
+  if (screen.width < 720) {
+    desktopArr1.style.display = 'none';
+    desktopArr2.style.display = 'none';
+    sliderContainer.classList.add('active');
+  }
 });
 
 // click right btn

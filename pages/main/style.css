@@ -426,10 +426,9 @@ footer .wrapper div a span {
 }
 
 .slider_container .pets_cards {
-  --items-per-screen: 3;
   max-width: 85%;
   margin: 0 auto;
-  gap: 5.625rem;
+  gap: 4.5rem;
 }
 
 .slider_container .arrow_circles {
@@ -834,6 +833,32 @@ footer .wrapper div a span {
   .modal_wrapper .close_wrapper {
     max-width: 74%;
   }
+
+  .slider_container.active {
+    flex-direction: column;
+  }
+
+  .pets_section .mobile_arrows {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 12rem;
+    margin-bottom: 2.63rem;
+  }
+
+  .pets_section .mobile_arrows .arrow_circles {
+    color: var(--color-dark);
+    border: 1px solid var(--primary-hover);
+    border-radius: 65%;
+    padding: 1rem;
+    display: flex;
+  }
+
+  .pets_section .mobile_arrows .arrow_circles:hover {
+    background-color: var(--primary-hover);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+  }
 }
 
 @media (max-width: 630px) {
@@ -870,28 +895,6 @@ footer .wrapper div a span {
 
   .pets_section .wrapper .pets_cards {
     justify-content: center;
-  }
-
-  .pets_section .mobile_arrows {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 12rem;
-    margin-bottom: 2.63rem;
-  }
-
-  .pets_section .mobile_arrows .arrow_circles {
-    color: var(--color-dark);
-    border: 1px solid var(--primary-hover);
-    border-radius: 65%;
-    padding: 1rem;
-    display: flex;
-  }
-
-  .pets_section .mobile_arrows .arrow_circles:hover {
-    background-color: var(--primary-hover);
-    transition: all 0.3s ease 0s;
-    cursor: pointer;
   }
 
   .help_section .first_grid {
